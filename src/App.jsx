@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 const App = () => {
   const [title, setTitle] = useState("Ты любишь меня?");
   const [countNo, setCountNo] = useState(0);
-  const [gif, setGif] = useState("start");
+  const [gif, setGif] = useState("");
   const [isFinished, setIsFinished] = useState(false);
 
   useEffect(() => {
@@ -17,6 +17,8 @@ const App = () => {
       setTitle("Пошел ты <===3");
       setGif("no");
       setIsFinished(true); // Завершаем опрос
+    } else {
+      setGif('start')
     }
   }, [countNo]);
 
