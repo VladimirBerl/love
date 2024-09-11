@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gif {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 320px;
+  animation: gif 0.6s cubic-bezier(0.42, 0, 0, 1.11);
+}
+
+.title {
+  margin-top: 100px;
+  animation: title 0.6s cubic-bezier(0.42, 0, 0, 1.11);
+}
+.btn-yes,
+.btn-no {
+  position: absolute;
+  z-index: 1;
+  min-width: 75px;
+  height: 50px;
+
+  animation: btn 0.6s cubic-bezier(0.42, 0, 0, 1.11);
+  box-shadow: 0px 0px 4px 2px #ffd8d4;
+  background-color: #ffc1bb;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+
+  color: #fff;
+  font-size: 16px;
+
+  &:active {
+    transform: scale(1.1);
+  }
+}
+
+.btn-yes {
+  bottom: 10%;
+  left: 20%;
+}
+.btn-no {
+  bottom: 10%;
+  right: 20%;
+}
+
+@keyframes gif {
+  0% {
+    width: 200px;
+    height: 200px;
+  }
+}
+@keyframes title {
+  0% {
+    transform: translateY(-150px);
+  }
+}
+@keyframes btn {
+  0% {
+    transform: translateY(170px);
+  }
+}
